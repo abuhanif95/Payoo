@@ -103,7 +103,64 @@
       </div>
     </section>
 
-    <section id="cashout" class="w-11/12 py-5 mx-auto">
+    <section id="add-money" class="w-11/12 py-5 mx-auto">
+      <h2 class="mb-4 text-xl font-bold">Add Money</h2>
+      <div class="w-full mx-auto shadow card bg-base-100 rounded-2xl">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="font-semibold label text-neutral">Select Bank</label>
+            <select
+              id="add-money-bank"
+              class="w-full rounded-full select bg-base-200"
+            >
+              <option disabled selected>Select a Bank</option>
+              <option value="ICBC">ICBC</option>
+              <option value="DBBL">DBBL</option>
+              <option value="IBBL">IBBL</option>
+            </select>
+            <br />
+
+            <label class="font-semibold label text-neutral">Agent Number</label>
+            <input
+              type="text"
+              id="add-money-number"
+              class="w-full rounded-full input bg-base-200"
+              placeholder="Enter Bank 11 Digits Number"
+              maxlength="11"
+              minlength="11"
+            />
+            <br />
+
+            <label class="font-semibold label text-neutral"
+              >Amount to Add</label
+            >
+            <input
+              type="number"
+              id="add-money-amount"
+              class="w-full rounded-full input bg-base-200"
+              placeholder="Enter Amount to Add"
+            />
+            <br />
+
+            <label class="font-semibold label text-neutral">4 Digits Pin</label>
+            <input
+              type="password"
+              id="add-money-pin"
+              class="w-full rounded-full input bg-base-200"
+              placeholder="Enter 4 Digits pin"
+            />
+            <button
+              id="add-money-btn"
+              class="mt-5 rounded-full btn btn-primary"
+            >
+              Add Money
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+
+    <section id="cashout" class="hidden w-11/12 py-5 mx-auto">
       <h2 class="mb-4 text-xl font-bold">Cashout</h2>
       <div class="w-full mx-auto shadow card bg-base-100 rounded-2xl">
         <div class="card-body">
@@ -144,6 +201,7 @@
     </section>
 
     <script src="script/machine.js"></script>
+    <script src="script/addMoney.js"></script>
     <script src="script/cashout.js"></script>
   </body>
 </html>
